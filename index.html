@@ -3,239 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Portfolio | พุฒิเทพ ประเสริฐ</title>
+
+  <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="logo">GET<span>.</span></div>
+  <nav>
+    <div class="logo">GET.</div>
 
-    <nav>
-      <a href="#home">หน้าแรก</a>
-      <a href="#profile">ประวัติ</a>
+    <div class="menu">
+      <a href="#home">หน้าหลัก</a>
+      <a href="#about">เกี่ยวกับฉัน</a>
+      <a href="#activities">กิจกรรม</a>
       <a href="#awards">รางวัล</a>
-      <a href="#education">การศึกษา</a>
       <a href="#contact">ติดต่อ</a>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-
-  <!-- Home -->
   <section id="home" class="hero">
-
     <div class="hero-text">
-      <p class="small-title">PORTFOLIO • LAW</p>
+      <p class="tag">MY PORTFOLIO</p>
 
       <h1>
         พุฒิเทพ<br>
         <span>ประเสริฐ</span>
       </h1>
 
-      <p class="nickname">
-        ชื่อเล่น <b>เก็ท</b>
-      </p>
+      <p class="nickname">ชื่อเล่น "เก็ท"</p>
 
       <p class="intro">
-        นักเรียนระดับมัธยมศึกษาตอนปลาย
-        ผู้มีความตั้งใจที่จะศึกษาต่อใน
-        <strong>คณะนิติศาสตร์</strong>
-        และพัฒนาทักษะด้านกฎหมายอย่างต่อเนื่อง
+        ยินดีต้อนรับสู่ Portfolio ของพุฒิเทพ ประเสริฐ
+        เว็บไซต์รวบรวมประวัติ กิจกรรม และประสบการณ์
       </p>
 
-      <div class="buttons">
-        <a href="#awards" class="btn main-btn">
-          ดูผลงานเด่น
-        </a>
-
-        <a href="#contact" class="btn second-btn">
-          ติดต่อ
-        </a>
-      </div>
+      <a href="#about" class="btn">ดู Portfolio ↓</a>
     </div>
 
-
-    <!-- รูปโปรไฟล์ -->
-    <div class="profile-photo">
-
-      <img src="assets/profile.jpg"
-           alt="พุฒิเทพ ประเสริฐ">
-
-      <div class="law-icon">
-        ⚖
-      </div>
-
+    <div class="hero-circle">
+      GET
     </div>
-
   </section>
 
 
-  <!-- Profile -->
-  <section id="profile" class="section">
+  <section id="about">
+    <h2 class="title">
+      <span>01</span> เกี่ยวกับฉัน
+    </h2>
 
-    <p class="small-title">01 • PROFILE</p>
+    <div class="about-grid">
 
-    <h2>ตัวตนของผม</h2>
+      <div class="card">
+        <h3>ข้อมูลส่วนตัว</h3>
 
-    <div class="profile-card">
+        <p>
+          <strong>ชื่อ:</strong>
+          พุฒิเทพ ประเสริฐ
+        </p>
 
-      <div class="icon">
-        ⚖
+        <p>
+          <strong>ชื่อเล่น:</strong>
+          เก็ท
+        </p>
+
+        <p>
+          <strong>โรงเรียน:</strong>
+          โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+        </p>
+
+        <p>
+          <strong>ที่อยู่:</strong>
+          ตำบลหนองหงษ์ อำเภอพานทอง จังหวัดชลบุรี
+        </p>
       </div>
+
+      <div class="card hobby">
+        <div class="icon">🎧</div>
+        <h3>งานอดิเรก</h3>
+        <p>ฟังพอดแคสต์และเรื่องเล่าต่าง ๆ</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="activities" class="dark">
+    <h2 class="title">
+      <span>02</span> กิจกรรม
+    </h2>
+
+    <div class="activities">
+
+      <div class="activity">
+        <img src="constitutional-court.jpg"
+             alt="โครงการยุวชนศาลรัฐธรรมนูญ">
+
+        <div class="activity-content">
+          <h3>โครงการยุวชนศาลรัฐธรรมนูญ</h3>
+
+          <p>
+            เข้าร่วมกิจกรรมโครงการยุวชนศาลรัฐธรรมนูญ
+            เพื่อเรียนรู้เกี่ยวกับกฎหมายและรัฐธรรมนูญ
+          </p>
+        </div>
+      </div>
+
+
+      <div class="activity">
+        <img src="law-competition.jpg"
+             alt="การแข่งขันตอบปัญหากฎหมาย">
+
+        <div class="activity-content">
+          <h3>การแข่งขันตอบปัญหากฎหมาย</h3>
+
+          <p>
+            เข้าร่วมการแข่งขันตอบปัญหากฎหมาย
+            มหาวิทยาลัยหัวเฉียวเฉลิมพระเกียรติ
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="awards">
+    <h2 class="title">
+      <span>03</span> รางวัล
+    </h2>
+
+    <div class="award">
 
       <div>
-        <h3>มุ่งมั่นสู่เส้นทางนิติศาสตร์</h3>
-
-        <p>
-          ตั้งใจเข้าศึกษาต่อคณะนิติศาสตร์
-          โดยมีประสบการณ์จากการแข่งขันตอบปัญหากฎหมาย
-          ซึ่งช่วยฝึกการคิดวิเคราะห์ตัวบทกฎหมาย
-          และทำให้มีความมั่นใจในเส้นทางนี้มากขึ้น
-          พร้อมเรียนรู้และพัฒนาตนเองอย่างเต็มที่
-        </p>
+        <img src="certificate.jpg"
+             alt="เกียรติบัตรรางวัลชมเชย">
       </div>
 
-    </div>
+      <div class="award-text">
+        <p class="orange">AWARD</p>
 
-  </section>
-
-
-  <!-- Awards -->
-  <section id="awards" class="section">
-
-    <p class="small-title">02 • ACHIEVEMENTS</p>
-
-    <h2>รางวัลที่ได้รับ</h2>
-
-    <div class="awards">
-
-      <!-- รางวัลที่ 1 -->
-      <div class="award-card winner">
-
-        <div class="number">
-          01
-        </div>
-
-        <div class="medal">
-          🥇
-        </div>
-
-        <p class="award-title">
-          รางวัลชนะเลิศ อันดับ 1
-        </p>
-
-        <h3>
-          การแข่งขันตอบปัญหากฎหมาย
-        </h3>
+        <h3>รางวัล "ชมเชย"</h3>
 
         <p>
-          โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
-        </p>
-
-      </div>
-
-
-      <!-- รางวัลที่ 2 -->
-      <div class="award-card">
-
-        <div class="number">
-          02
-        </div>
-
-        <div class="medal">
-          🏅
-        </div>
-
-        <p class="award-title">
-          รางวัลชมเชย
-        </p>
-
-        <h3>
           การแข่งขันตอบปัญหากฎหมาย
-        </h3>
+        </p>
+
+        <p>
+          ระดับมัธยมศึกษาตอนปลาย
+          ภูมิภาคตะวันออก
+        </p>
 
         <p>
           มหาวิทยาลัยราชภัฏรำไพพรรณี
+          เนื่องในโอกาสเทิดพระเกียรติ
+          สมเด็จพระนางเจ้ารำไพพรรณี
+          และการได้รับการยกย่องจากองค์การยูเนสโก
+          ประจำปี พ.ศ. 2567
         </p>
-
       </div>
 
     </div>
-
   </section>
 
 
-  <!-- Education -->
-  <section id="education" class="section">
+  <section id="contact" class="contact-section">
 
-    <p class="small-title">03 • EDUCATION</p>
-
-    <h2>การศึกษา</h2>
-
-    <div class="education-card">
-
-      <div class="education-icon">
-        🎓
-      </div>
-
-      <div>
-
-        <span>
-          มัธยมศึกษาตอนปลาย
-        </span>
-
-        <h3>
-          โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
-        </h3>
-
-        <p>
-          กำลังศึกษาในระดับมัธยมศึกษาตอนปลาย
-          และเตรียมความพร้อมเพื่อศึกษาต่อด้านนิติศาสตร์
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- Contact -->
-  <section id="contact" class="contact">
-
-    <p class="small-title">
-      04 • CONTACT
-    </p>
-
-    <h2>
-      ติดต่อผม
+    <h2 class="title">
+      <span>04</span> ติดต่อ
     </h2>
 
-    <p>
-      ขอบคุณที่เข้าชม Portfolio ของผมครับ
-    </p>
+    <div class="contact">
 
-    <div class="contact-info">
-
-      <a href="mailto:master21002008@gmail.com">
-        ✉ master21002008@gmail.com
+      <a href="https://www.facebook.com/" target="_blank">
+        Facebook
+        <strong>พุฒิเทพ ประเสริฐ ↗</strong>
       </a>
 
-      <span>
-        ◎ get21.8
-      </span>
-
-      <span>
-        👤 พุฒิเทพ ประเสริฐ
-      </span>
+      <a href="https://www.instagram.com/get21.8/" target="_blank">
+        Instagram
+        <strong>@get21.8 ↗</strong>
+      </a>
 
     </div>
 
@@ -243,257 +195,17 @@
 
 
   <footer>
-    © 2026 พุฒิเทพ ประเสริฐ • Portfolio
+    © 2026 พุฒิเทพ ประเสริฐ — Portfolio
   </footer>
 
-</body>
-</html><!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Portfolio | พุฒิเทพ ประเสริฐ</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="logo">GET<span>.</span></div>
-
-    <nav>
-      <a href="#home">หน้าแรก</a>
-      <a href="#profile">ประวัติ</a>
-      <a href="#awards">รางวัล</a>
-      <a href="#education">การศึกษา</a>
-      <a href="#contact">ติดต่อ</a>
-    </nav>
-  </header>
-
-
-  <!-- Home -->
-  <section id="home" class="hero">
-
-    <div class="hero-text">
-      <p class="small-title">PORTFOLIO • LAW</p>
-
-      <h1>
-        พุฒิเทพ<br>
-        <span>ประเสริฐ</span>
-      </h1>
-
-      <p class="nickname">
-        ชื่อเล่น <b>เก็ท</b>
-      </p>
-
-      <p class="intro">
-        นักเรียนระดับมัธยมศึกษาตอนปลาย
-        ผู้มีความตั้งใจที่จะศึกษาต่อใน
-        <strong>คณะนิติศาสตร์</strong>
-        และพัฒนาทักษะด้านกฎหมายอย่างต่อเนื่อง
-      </p>
-
-      <div class="buttons">
-        <a href="#awards" class="btn main-btn">
-          ดูผลงานเด่น
-        </a>
-
-        <a href="#contact" class="btn second-btn">
-          ติดต่อ
-        </a>
-      </div>
-    </div>
-
-
-    <!-- รูปโปรไฟล์ -->
-    <div class="profile-photo">
-
-      <img src="assets/profile.jpg"
-           alt="พุฒิเทพ ประเสริฐ">
-
-      <div class="law-icon">
-        ⚖
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- Profile -->
-  <section id="profile" class="section">
-
-    <p class="small-title">01 • PROFILE</p>
-
-    <h2>ตัวตนของผม</h2>
-
-    <div class="profile-card">
-
-      <div class="icon">
-        ⚖
-      </div>
-
-      <div>
-        <h3>มุ่งมั่นสู่เส้นทางนิติศาสตร์</h3>
-
-        <p>
-          ตั้งใจเข้าศึกษาต่อคณะนิติศาสตร์
-          โดยมีประสบการณ์จากการแข่งขันตอบปัญหากฎหมาย
-          ซึ่งช่วยฝึกการคิดวิเคราะห์ตัวบทกฎหมาย
-          และทำให้มีความมั่นใจในเส้นทางนี้มากขึ้น
-          พร้อมเรียนรู้และพัฒนาตนเองอย่างเต็มที่
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- Awards -->
-  <section id="awards" class="section">
-
-    <p class="small-title">02 • ACHIEVEMENTS</p>
-
-    <h2>รางวัลที่ได้รับ</h2>
-
-    <div class="awards">
-
-      <!-- รางวัลที่ 1 -->
-      <div class="award-card winner">
-
-        <div class="number">
-          01
-        </div>
-
-        <div class="medal">
-          🥇
-        </div>
-
-        <p class="award-title">
-          รางวัลชนะเลิศ อันดับ 1
-        </p>
-
-        <h3>
-          การแข่งขันตอบปัญหากฎหมาย
-        </h3>
-
-        <p>
-          โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
-        </p>
-
-      </div>
-
-
-      <!-- รางวัลที่ 2 -->
-      <div class="award-card">
-
-        <div class="number">
-          02
-        </div>
-
-        <div class="medal">
-          🏅
-        </div>
-
-        <p class="award-title">
-          รางวัลชมเชย
-        </p>
-
-        <h3>
-          การแข่งขันตอบปัญหากฎหมาย
-        </h3>
-
-        <p>
-          มหาวิทยาลัยราชภัฏรำไพพรรณี
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- Education -->
-  <section id="education" class="section">
-
-    <p class="small-title">03 • EDUCATION</p>
-
-    <h2>การศึกษา</h2>
-
-    <div class="education-card">
-
-      <div class="education-icon">
-        🎓
-      </div>
-
-      <div>
-
-        <span>
-          มัธยมศึกษาตอนปลาย
-        </span>
-
-        <h3>
-          โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
-        </h3>
-
-        <p>
-          กำลังศึกษาในระดับมัธยมศึกษาตอนปลาย
-          และเตรียมความพร้อมเพื่อศึกษาต่อด้านนิติศาสตร์
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- Contact -->
-  <section id="contact" class="contact">
-
-    <p class="small-title">
-      04 • CONTACT
-    </p>
-
-    <h2>
-      ติดต่อผม
-    </h2>
-
-    <p>
-      ขอบคุณที่เข้าชม Portfolio ของผมครับ
-    </p>
-
-    <div class="contact-info">
-
-      <a href="mailto:master21002008@gmail.com">
-        ✉ master21002008@gmail.com
-      </a>
-
-      <span>
-        ◎ get21.8
-      </span>
-
-      <span>
-        👤 พุฒิเทพ ประเสริฐ
-      </span>
-
-    </div>
-
-  </section>
-
-
-  <footer>
-    © 2026 พุฒิเทพ ประเสริฐ • Portfolio
-  </footer>
+  <script src="script.js"></script>
 
 </body>
 </html>
+  
+
+        
+                
+
+    
+        
