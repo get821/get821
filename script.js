@@ -1,5 +1,6 @@
-// เลื่อนหน้าเว็บแบบนุ่มนวล
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+// เลื่อนหน้าเว็บแบบนุ่มนวลเมื่อกดเมนู
+
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
 
   link.addEventListener("click", function(event) {
 
