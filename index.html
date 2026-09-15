@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Portfolio | พุฒิเทพ ประเสริฐ</title>
 
   <style>
     * {
@@ -14,206 +14,533 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background: #fff8f2;
+      color: #333;
     }
 
-    /* เมนู */
+    /* ===== เมนู ===== */
     nav {
       background: #f26b21;
       padding: 15px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav button {
-      border: none;
       background: transparent;
+      border: none;
       color: white;
       font-size: 16px;
       font-weight: bold;
-      padding: 10px 15px;
-      margin: 5px;
-      border-radius: 8px;
+      margin: 5px 8px;
       cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 8px;
     }
 
-    nav button:hover,
+    nav button:hover {
+      background: #d95712;
+    }
+
     nav button.active {
       background: white;
       color: #f26b21;
     }
 
-    /* หน้า */
+    /* ===== หน้าเนื้อหา ===== */
     .page {
       display: none;
-      min-height: 80vh;
+      min-height: calc(100vh - 65px);
       padding: 60px 20px;
-      text-align: center;
+      animation: fadeIn 0.4s ease;
     }
 
     .page.active {
       display: block;
     }
 
-    .page h1 {
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1,
+    h2 {
       color: #f26b21;
-      font-size: 40px;
+      text-align: center;
     }
 
-    .page-box {
-      max-width: 900px;
-      margin: 30px auto;
+    /* ===== หน้าหลัก ===== */
+    #home {
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    #home img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #f26b21;
+    }
+
+    #home h1 {
+      font-size: 50px;
+      margin: 25px 0 10px;
+    }
+
+    #home h2 {
+      color: #333;
+      margin: 0;
+    }
+
+    /* ===== การ์ด ===== */
+    .card {
       background: white;
-      padding: 50px;
-      border-radius: 20px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-top: 30px;
     }
 
+    /* ===== คำนำ ===== */
+    .preface-card {
+      font-size: 18px;
+      line-height: 2;
+      text-align: justify;
+    }
+
+    .signature {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    /* ===== เกี่ยวกับฉัน ===== */
+    .about-content {
+      text-align: center;
+    }
+
+    .about-content img {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 15px;
+      border: 5px solid #f26b21;
+    }
+
+    .about-info {
+      text-align: left;
+      margin-top: 25px;
+      line-height: 2;
+    }
+
+    /* ===== กิจกรรม ===== */
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .activity-card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .activity-card img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .activity-card h3 {
+      color: #f26b21;
+    }
+
+    /* ===== รางวัล ===== */
+    .award-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-top: 30px;
+    }
+
+    .award-card img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 10px;
+    }
+
+    .award-card h3 {
+      color: #f26b21;
+      font-size: 28px;
+    }
+
+    /* ===== มหาวิทยาลัย ===== */
+    #university {
+      background: #25150e;
+      color: white;
+    }
+
+    #university h2 {
+      color: #ff9a52;
+    }
+
+    .university-card {
+      background: #3a2116;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .university-card img {
+      margin-bottom: 15px;
+    }
+
+    .university-card h3 {
+      color: #ff9a52;
+      font-size: 28px;
+    }
+
+    .university-card p {
+      line-height: 2;
+    }
+
+    /* ===== Footer ===== */
     footer {
       background: #f26b21;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
+    }
+
+    /* ===== มือถือ ===== */
+    @media (max-width: 700px) {
+
+      nav button {
+        font-size: 13px;
+        margin: 3px;
+        padding: 7px;
+      }
+
+      #home h1 {
+        font-size: 38px;
+      }
+
+      #home img {
+        width: 230px;
+        height: 230px;
+      }
+
+      .activity-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page {
+        padding: 40px 15px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- เมนู -->
+  <!-- ================= เมนู ================= -->
   <nav>
-
-    <button class="menu active"
-            onclick="changePage('home', this)">
-      หน้าหลัก
+    <button class="menu active" onclick="showPage('home', this)">
+      🏠 หน้าหลัก
     </button>
 
-    <button class="menu"
-            onclick="changePage('preface', this)">
-      คำนำ
+    <button class="menu" onclick="showPage('preface', this)">
+      📖 คำนำ
     </button>
 
-    <button class="menu"
-            onclick="changePage('about', this)">
-      เกี่ยวกับฉัน
+    <button class="menu" onclick="showPage('about', this)">
+      👤 เกี่ยวกับฉัน
     </button>
 
-    <button class="menu"
-            onclick="changePage('activities', this)">
-      กิจกรรม
+    <button class="menu" onclick="showPage('activities', this)">
+      📚 กิจกรรม
     </button>
 
-    <button class="menu"
-            onclick="changePage('awards', this)">
-      รางวัล
+    <button class="menu" onclick="showPage('awards', this)">
+      🏆 รางวัล
     </button>
 
-    <button class="menu"
-            onclick="changePage('university', this)">
-      มหาวิทยาลัยที่สนใจ
+    <button class="menu" onclick="showPage('university', this)">
+      🎓 มหาวิทยาลัยที่สนใจ
     </button>
-
   </nav>
 
 
-  <!-- 1. หน้าหลัก -->
+  <!-- ================= 1. หน้าหลัก ================= -->
   <section id="home" class="page active">
 
-    <div class="page-box">
-      <h1>หน้าหลัก</h1>
-      <p>ใส่ข้อมูลหน้าหลักตรงนี้</p>
+    <div class="container">
+
+      <img
+        src="Screenshot_2026-09-15-08-07-55-76_965bbf4d18d205f782c6b8409c5773a4~2.jpg"
+        alt="นักเรียนชายในชุดนักเรียน"
+      >
+
+      <h1>Portfolio</h1>
+
+      <h2>พุฒิเทพ ประเสริฐ</h2>
+
+      <p>
+        แฟ้มสะสมผลงานเพื่อศึกษาต่อคณะนิติศาสตร์
+      </p>
+
     </div>
 
   </section>
 
 
-  <!-- 2. คำนำ -->
+  <!-- ================= 2. คำนำ ================= -->
   <section id="preface" class="page">
 
-    <div class="page-box">
-      <h1>คำนำ</h1>
-      <p>ใส่ข้อมูลคำนำตรงนี้</p>
+    <div class="container">
+
+      <h2>📖 02 คำนำ</h2>
+
+      <div class="card preface-card">
+
+        <p>
+          แฟ้มสะสมผลงานฉบับนี้สะท้อนถึงความมุ่งมั่นและความพร้อมของผม
+          ที่มีต่อคณะนิติศาสตร์ โดยมีความตั้งใจจริงที่จะศึกษากฎหมาย
+          เพื่อนำความรู้ไปใช้ขับเคลื่อนสังคมให้เกิดความยุติธรรม
+        </p>
+
+        <p class="signature">
+          พุฒิเทพ ประเสริฐ
+        </p>
+
+      </div>
+
     </div>
 
   </section>
 
 
-  <!-- 3. เกี่ยวกับฉัน -->
+  <!-- ================= 3. เกี่ยวกับฉัน ================= -->
   <section id="about" class="page">
 
-    <div class="page-box">
-      <h1>เกี่ยวกับฉัน</h1>
-      <p>ใส่ข้อมูลเกี่ยวกับฉันตรงนี้</p>
+    <div class="container">
+
+      <h2>👤 03 เกี่ยวกับฉัน</h2>
+
+      <div class="card about-content">
+
+        <img
+          src="Screenshot_2026-09-15-08-07-55-76_965bbf4d18d205f782c6b8409c5773a4~2.jpg"
+          alt="นักเรียนชายในชุดนักเรียน"
+        >
+
+        <div class="about-info">
+
+          <p>
+            <strong>ชื่อ:</strong>
+            พุฒิเทพ ประเสริฐ
+          </p>
+
+          <p>
+            <strong>ชื่อเล่น:</strong>
+            เก็ท
+          </p>
+
+          <p>
+            <strong>โรงเรียน:</strong>
+            โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
+          </p>
+
+          <p>
+            <strong>งานอดิเรก:</strong>
+            ฟังพอดแคสต์และเรื่องเล่าต่าง ๆ
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
 
   </section>
 
 
-  <!-- 4. กิจกรรม -->
+  <!-- ================= 4. กิจกรรม ================= -->
   <section id="activities" class="page">
 
-    <div class="page-box">
-      <h1>กิจกรรม</h1>
-      <p>ใส่ข้อมูลกิจกรรมตรงนี้</p>
+    <div class="container">
+
+      <h2>📚 04 กิจกรรม</h2>
+
+      <div class="activity-grid">
+
+        <div class="activity-card">
+
+          <img
+            src="constitutional-court.jpg"
+            alt="โครงการยุวชนศาลรัฐธรรมนูญ"
+          >
+
+          <h3>โครงการยุวชนศาลรัฐธรรมนูญ</h3>
+
+          <p>
+            เข้าร่วมกิจกรรมเพื่อเรียนรู้เกี่ยวกับศาลรัฐธรรมนูญ
+            และความรู้ด้านกฎหมาย
+          </p>
+
+        </div>
+
+
+        <div class="activity-card">
+
+          <img
+            src="law-competition.jpg"
+            alt="การแข่งขันตอบปัญหากฎหมาย"
+          >
+
+          <h3>การแข่งขันตอบปัญหากฎหมาย</h3>
+
+          <p>
+            เข้าร่วมการแข่งขันตอบปัญหากฎหมาย
+            มหาวิทยาลัยหัวเฉียวเฉลิมพระเกียรติ
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
 
   </section>
 
 
-  <!-- 5. รางวัล -->
+  <!-- ================= 5. รางวัล ================= -->
   <section id="awards" class="page">
 
-    <div class="page-box">
-      <h1>รางวัล</h1>
-      <p>ใส่ข้อมูลรางวัลตรงนี้</p>
+    <div class="container">
+
+      <h2>🏆 05 รางวัล</h2>
+
+      <div class="award-card">
+
+        <img
+          src="certificate.jpg"
+          alt="รางวัลชมเชยการแข่งขันตอบปัญหากฎหมาย"
+        >
+
+        <h3>รางวัลชมเชย</h3>
+
+        <p>
+          การแข่งขันตอบปัญหากฎหมาย
+          ระดับมัธยมศึกษาตอนปลาย ภูมิภาคตะวันออก
+        </p>
+
+        <p>
+          มหาวิทยาลัยราชภัฏรำไพพรรณี
+          ประจำปี พ.ศ. 2567
+        </p>
+
+      </div>
+
     </div>
 
   </section>
 
 
-  <!-- 6. มหาวิทยาลัยที่สนใจ -->
+  <!-- ================= 6. มหาวิทยาลัยที่สนใจ ================= -->
   <section id="university" class="page">
 
-    <div class="page-box">
-      <h1>มหาวิทยาลัยที่สนใจ</h1>
-      <p>ใส่ข้อมูลมหาวิทยาลัยตรงนี้</p>
+    <div class="container">
+
+      <h2>🎓 06 มหาวิทยาลัยที่สนใจ</h2>
+
+      <div class="university-card">
+
+        <img
+          src="watermarked_img_4016112533898818781.png"
+          width="120"
+          alt="ตรามหาวิทยาลัยเกษตรศาสตร์"
+        >
+
+        <h3>
+          มหาวิทยาลัยเกษตรศาสตร์
+          (วิทยาเขตบางเขน)
+        </h3>
+
+        <p>
+          ⚖️ <b>จุดเด่น:</b>
+          กฎหมายประยุกต์ • ทรัพย์สินทางปัญญา • กฎหมายพาณิชย์
+        </p>
+
+        <p>
+          🎯 เป็นมหาวิทยาลัยที่ผมสนใจ
+          และมีความตั้งใจที่จะศึกษาต่อด้านกฎหมาย
+        </p>
+
+      </div>
+
     </div>
 
   </section>
 
 
+  <!-- ================= Footer ================= -->
   <footer>
-    Portfolio
+    © 2026 พุฒิเทพ ประเสริฐ | Portfolio
   </footer>
 
 
-  <!-- JavaScript เปลี่ยนหน้า -->
+  <!-- ================= JavaScript ================= -->
   <script>
-
-    function changePage(pageId, button) {
+    function showPage(pageId, button) {
 
       // ซ่อนทุกหน้า
-      const pages = document.querySelectorAll(".page");
+      const pages = document.querySelectorAll('.page');
 
       pages.forEach(function(page) {
-        page.classList.remove("active");
+        page.classList.remove('active');
       });
 
-      // แสดงหน้าที่กด
-      document.getElementById(pageId).classList.add("active");
+      // แสดงหน้าที่เลือก
+      document.getElementById(pageId).classList.add('active');
 
-      // เปลี่ยนปุ่มที่เลือก
-      const buttons = document.querySelectorAll(".menu");
+      // เอาสถานะ active ออกจากปุ่มทั้งหมด
+      const buttons = document.querySelectorAll('.menu');
 
       buttons.forEach(function(btn) {
-        btn.classList.remove("active");
+        btn.classList.remove('active');
       });
 
-      button.classList.add("active");
+      // ทำให้ปุ่มที่กดเป็นสีที่เลือก
+      button.classList.add('active');
 
-      // กลับไปด้านบน
+      // กลับไปด้านบนทันที
       window.scrollTo(0, 0);
     }
-
   </script>
 
 </body>
-</html>
+      </html>
+
+
+
+  
