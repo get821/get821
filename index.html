@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff8f2;
+    }
+
+    /* เมนู */
+    nav {
+      background: #f26b21;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav button {
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    nav button:hover,
+    nav button.active {
+      background: white;
+      color: #f26b21;
+    }
+
+    /* หน้า */
+    .page {
+      display: none;
+      min-height: 80vh;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .page h1 {
+      color: #f26b21;
+      font-size: 40px;
+    }
+
+    .page-box {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #f26b21;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- เมนู -->
+  <nav>
+
+    <button class="menu active"
+            onclick="changePage('home', this)">
+      หน้าหลัก
+    </button>
+
+    <button class="menu"
+            onclick="changePage('preface', this)">
+      คำนำ
+    </button>
+
+    <button class="menu"
+            onclick="changePage('about', this)">
+      เกี่ยวกับฉัน
+    </button>
+
+    <button class="menu"
+            onclick="changePage('activities', this)">
+      กิจกรรม
+    </button>
+
+    <button class="menu"
+            onclick="changePage('awards', this)">
+      รางวัล
+    </button>
+
+    <button class="menu"
+            onclick="changePage('university', this)">
+      มหาวิทยาลัยที่สนใจ
+    </button>
+
+  </nav>
+
+
+  <!-- 1. หน้าหลัก -->
+  <section id="home" class="page active">
+
+    <div class="page-box">
+      <h1>หน้าหลัก</h1>
+      <p>ใส่ข้อมูลหน้าหลักตรงนี้</p>
+    </div>
+
+  </section>
+
+
+  <!-- 2. คำนำ -->
+  <section id="preface" class="page">
+
+    <div class="page-box">
+      <h1>คำนำ</h1>
+      <p>ใส่ข้อมูลคำนำตรงนี้</p>
+    </div>
+
+  </section>
+
+
+  <!-- 3. เกี่ยวกับฉัน -->
+  <section id="about" class="page">
+
+    <div class="page-box">
+      <h1>เกี่ยวกับฉัน</h1>
+      <p>ใส่ข้อมูลเกี่ยวกับฉันตรงนี้</p>
+    </div>
+
+  </section>
+
+
+  <!-- 4. กิจกรรม -->
+  <section id="activities" class="page">
+
+    <div class="page-box">
+      <h1>กิจกรรม</h1>
+      <p>ใส่ข้อมูลกิจกรรมตรงนี้</p>
+    </div>
+
+  </section>
+
+
+  <!-- 5. รางวัล -->
+  <section id="awards" class="page">
+
+    <div class="page-box">
+      <h1>รางวัล</h1>
+      <p>ใส่ข้อมูลรางวัลตรงนี้</p>
+    </div>
+
+  </section>
+
+
+  <!-- 6. มหาวิทยาลัยที่สนใจ -->
+  <section id="university" class="page">
+
+    <div class="page-box">
+      <h1>มหาวิทยาลัยที่สนใจ</h1>
+      <p>ใส่ข้อมูลมหาวิทยาลัยตรงนี้</p>
+    </div>
+
+  </section>
+
+
+  <footer>
+    Portfolio
+  </footer>
+
+
+  <!-- JavaScript เปลี่ยนหน้า -->
+  <script>
+
+    function changePage(pageId, button) {
+
+      // ซ่อนทุกหน้า
+      const pages = document.querySelectorAll(".page");
+
+      pages.forEach(function(page) {
+        page.classList.remove("active");
+      });
+
+      // แสดงหน้าที่กด
+      document.getElementById(pageId).classList.add("active");
+
+      // เปลี่ยนปุ่มที่เลือก
+      const buttons = document.querySelectorAll(".menu");
+
+      buttons.forEach(function(btn) {
+        btn.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      // กลับไปด้านบน
+      window.scrollTo(0, 0);
+    }
+
+  </script>
+
+</body>
+</html>
