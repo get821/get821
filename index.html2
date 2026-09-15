@@ -1,0 +1,23 @@
+<section id="about" class="section">
+  <div class="container">
+
+    <h2>02 เกี่ยวกับฉัน</h2>
+
+    <div class="card">
+
+      <img
+        src="Screenshot_2026-09-15-08-07-55-76_965bbf4d18d205f782c6b8409c5773a4~2.jpg"
+        alt="นักเรียนชายในชุดนักเรียน"
+        width="300"
+      />
+
+      <h3>พุฒิเทพ ประเสริฐ</h3>
+
+      <p><strong>ชื่อเล่น:</strong> เก็ท</p>
+      <p><strong>โรงเรียน:</strong> โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
+      <p><strong>งานอดิเรก:</strong> ฟังพอดแคสต์และเรื่องเล่าต่าง ๆ</p>
+
+    </div>
+
+  </div>
+</section>
